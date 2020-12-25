@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+*{
+  margin: 0px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+  --Grey: rgb(229,218,218);
+  --Blue: rgb(0, 55, 95);
+  --Orange: rgb(229,149,0);
+  --Red: rgb(132,0,50);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body{
+  width: 100vw;
   min-height: 100vh;
+}
+.appContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
+.header{
+  height: 5vh;
+  background-color: var(--Blue);
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  color: var(--Grey);
 }
-
-.App-link {
-  color: #61dafb;
+.footer{
+  height: 5vh;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 0px;
+  background-color: var(--Blue);
+  width: 100vw;
+  text-align: center;
+  color: var(--Grey);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cashReturn{
+  width: 100%;
+  min-height: 100vh;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--Grey);
+  color: var(--Blue);
+  position: relative;
+}
+.heading{
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+}
+.headingSpan{
+  font-size: 2.2rem;
+  color: var(--Orange);
+}
+.cashForm{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1rem;
+}
+.inputArea{
+  width: 150px;
+  height: 50px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0 1rem;
+}
+.cashBtn{
+  padding: 0.6rem;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: var(--Red);
+  color: var(--Grey);
+  cursor: pointer;
+}
+.cashBtn.done{
+  position: absolute;
+  bottom: 4rem;
+}
+.cashReturn h1{
+  padding: 2rem;
+  margin: 0.8rem;
+}
+.cashOutput{
+  margin: 2rem;
+  padding: 2rem;
+  border: 1px solid var(--Blue);
+  border-radius: 10px;
+}
+.cashNotes{
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+.notes{
+  font-size: 2rem;
+  padding: 1rem;
+}
+@media only screen and (max-width: 450px){
+  .heading{
+    padding: 1rem;
+    font-size: 0.8rem;
   }
-  to {
-    transform: rotate(360deg);
+  .headingSpan{
+    font-size: 1rem;
+    color: var(--Orange);
+  }
+  .inputArea{
+    font-size: 0.8rem;
+    width: 70px;
+    height: 25px;
+  }
+  .cashBtn{
+    padding: 0.4rem;
+    font-size: 0.78rem;
+  }
+  .cashReturn h1{
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .cashOutput{
+    padding: 1rem;
+  }
+  .cashNotes{
+    font-size: 1rem;
+  }
+  .notes{
+    font-size: 1.2rem;
   }
 }
