@@ -53,12 +53,12 @@ body{
   position: relative;
 }
 .heading{
-  padding: 1rem;
-  font-size: 2rem;
+  padding: 0.8rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 .headingSpan{
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: var(--Orange);
 }
 .cashForm{
@@ -70,7 +70,7 @@ body{
 .inputArea{
   width: 150px;
   height: 50px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   margin: 0 1rem;
 }
