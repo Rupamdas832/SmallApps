@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import "./CashReturn.css"
+import Heading from './Heading';
 
 export default function CashReturn() {
 
@@ -46,8 +48,8 @@ export default function CashReturn() {
     }
     return (
         <div className="cashReturn">
-        <h3 className="heading">Enter your <span className="headingSpan">Bill Amount</span> and <span className="headingSpan">Cash</span>.</h3>
-        <h3 className="heading"> The app will give you the number of notes to return.</h3>
+        <Heading title="Cash Manager" color="rgb(132,0,50)"/>
+        <h3 className="subheading">Enter your <span className="headingSpan">Bill Amount</span> and <span className="headingSpan">Cash</span>. The app will give you the number of notes to return.</h3>
         <form className="cashForm">
             <input placeholder="Bill Amount" className="inputArea" value={bill1} type="number" onChange={(e) => setBill1(e.target.value)}/>
             {bill1 && <input placeholder="Enter Cash"  className="inputArea" value={cash} type="number" onChange={(e) => setCash(e.target.value)}/>}

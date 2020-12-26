@@ -1,0 +1,51 @@
+:root{
+    --DarkPurple: rgb(34,34,59);
+    --SlightPurple: rgb(154,140,152);
+    --LightPurple: rgb(201,173,167);
+    --DarkRed: rgb(214,40,40);
+}
+
+.heroSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--LightPurple);
+    width: 100vw;
+    height: 100vh;
+    padding: 5rem 0;
+}
+.heroSection h2{
+    margin: 2rem;
+    font-size: 2rem;
+    color: var(--DarkPurple);
+}
+.heroBtns{
+    margin-top: 2rem;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+.heroBtn{
+    font-size: 2rem;
+    padding: 1.5rem;
+    cursor: pointer;
+    border: 1px solid black;
+    box-shadow: 1px 4px 7px rgba(0, 0, 0, 0.623);
+    background-color: var(--SlightPurple);
+    color: var(--DarkPurple);
+}
+@media only screen and (max-width: 450px){
+    .heroBtns{
+        grid-gap: 1rem;
+    }
+    .heroSection h2{
+        font-size: 1.22rem;
+        
+    }
+    .heroBtn{
+        font-size: 1rem;
+        padding: 0.8rem;   
+    }
+}

@@ -1,0 +1,106 @@
+:root{
+    --Yellow : rgb(255, 255, 144);
+    --GreenBlue : rgb(0,127,95);
+    --LightGreen : rgb(71, 109, 2);
+}
+
+.luckyBirthday{
+    width: 100%;
+    min-height: 100vh;
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Yellow);
+    color: var(--LightGreen);
+    position: relative;
+    text-align: center;
+}
+.luckyInputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.luckySubInput{
+    margin: 0 3rem;
+}
+.luckysubheading{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 3rem;
+}
+.luckyinputArea{
+    width: 250px;
+    height: 70px;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 1rem;
+    margin: 0 0 2rem 0;
+}
+.inputLabel{
+    font-size: 2rem;
+    color: rgb(56, 56, 56);
+}
+.luckyBtn{
+    padding: 0.8rem;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: var(--GreenBlue);
+    color: var(--Grey);
+    cursor: pointer;
+    margin: 2rem;
+}
+.luckyBtn.reset{
+    position: absolute;
+    bottom: 2rem;
+}
+.note{
+    margin: 2rem;
+    border: 1px solid rgb(70, 70, 70);
+    color: rgb(56, 56, 56);
+    padding: 1rem;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 6rem;
+}
+@media only screen and (max-width: 450px){
+    .luckysubheading{
+        font-size: 1.2rem;
+        margin: 1rem;
+    } 
+    .luckyInputs{
+        display: flex;
+        flex-direction: column;
+    }
+    .luckySubInput{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .inputLabel{
+        font-size: 1.2rem;
+    }
+    .luckyinputArea{
+        width: 150px;
+        height: 30px;
+        margin: 0 0 2rem 0;
+        font-size: 1rem;
+    }
+    .luckyBtn{
+        margin: 0.5rem;
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
+    .note{
+        border: 1px solid rgb(70, 70, 70);
+        color: rgb(56, 56, 56);
+        padding: 0.2rem;
+        font-size: 0.7rem;
+        position: absolute;
+        bottom: 5rem;
+    }
+}
