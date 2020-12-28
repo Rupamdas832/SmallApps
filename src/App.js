@@ -6,6 +6,7 @@ import Header from "./Components/Header";
 import LuckyBirthday from "./Components/LuckyBirthday";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import HeroSection from "./Components/HeroSection";
+import ProfitLoss from "./Components/ProfitLoss";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route exact path="/" component={HeroSection}/>
           <Route path="/cashmanager" component={CashReturn}/>
           <Route path="/luckybirthday" component={LuckyBirthday}/>
+          <Route path="/profitloss" component={ProfitLoss}/>
         </Switch>
       <Footer/>
       </Router> 

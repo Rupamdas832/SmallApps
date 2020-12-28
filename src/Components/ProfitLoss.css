@@ -1,0 +1,92 @@
+:root{
+    --ProfitLightBlue: rgb(144,224,239);
+}
+.profitLoss{
+    width: 100%;
+    min-height: 100vh;
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--Blue);
+    position: relative;
+}
+.profitForm{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 3rem;
+}
+.profitSubInput{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profitInputLabel{
+    font-size: 1.5rem;
+    color: var(--ProfitLightBlue);
+    margin: 1rem;
+}
+
+.profitInputArea{
+    width: 350px;
+    height: 50px;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0 1rem;
+}
+.profitBtn{
+    padding: 0.6rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    background: none;
+    border: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: var(--ProfitLightBlue);
+    color: var(--DarkBlue);
+    cursor: pointer;
+}
+.profitBtn.reset{
+    position: absolute;
+    bottom: 7rem;
+  }
+.profitOutput{
+    margin: 2rem;
+    padding: 2rem;
+    color: var(--ProfitLightBlue);
+    border: 1px solid var(--Blue);
+    border-radius: 10px;
+}
+@media only screen and (max-width: 450px){
+    .profitForm{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    .profitSubInput{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .profitInputLabel{
+        font-size: 1rem;
+        color: var(--ProfitLightBlue);
+        margin: 0.2rem;
+    }
+    .profitInputArea{
+        width: 150px;
+    height: 35px;
+    font-size: 0.9rem;
+    margin: 0.5rem;
+    }
+    .profitBtn{
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+    .profitOutput{
+        margin: 1rem;
+        padding: 0.5rem;
+        font-size: 0.6rem;
+    }
+}

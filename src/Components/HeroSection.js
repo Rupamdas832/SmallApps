@@ -11,6 +11,7 @@ export default function HeroSection() {
             <div className="heroBtns"> 
                 <Link to="/cashmanager"><button className="heroBtn">Cash Manager</button></Link>
                 <Link to="/luckybirthday"><button className="heroBtn">Lucky Birthday</button></Link>
+                <Link to="/profitloss"><button className="heroBtn">Profit Loss</button></Link>
             </div>
             
         </div>

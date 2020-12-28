@@ -25,6 +25,7 @@
     width: 60%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
     text-align: center;
 }
 .heroBtn{
