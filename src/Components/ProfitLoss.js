@@ -38,7 +38,7 @@ function ProfitLoss() {
     }
     return (
         <div className="profitLoss" style={{backgroundColor: `${negative}`}}>
-        <Heading title="Stock Performance" color="golden"/>
+        <Heading title="Stock Performance" color="orange"/>
             <form className="profitForm">
                 <div className="profitSubInput">
                     <label className="profitInputLabel">Buying Price</label>
