@@ -1,0 +1,144 @@
+:root{
+    --groceryLightGreen : rgb(167,201,87);
+    --groceryDarkGreen: rgb(56,102,65);
+    --groceryRed: rgb(188,71,73);
+}
+
+.groceryList{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    align-items: center;
+    background-color: var(--groceryLightGreen);
+    position: relative;
+}
+.inputItems{
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr 1fr;
+    width: 80vw;
+    font-size: 1.2rem;
+    margin-top: 3rem;
+}
+.groceryInputArea{
+    width: 150px;
+    height: 50px;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0 1rem;
+  }
+.groceryInputArea.grocery{
+    width: 350px;
+}
+.groceryOutput{
+    width: 70vw;
+    height: auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.border{
+    border: 1px solid var(--groceryDarkGreen);
+    margin: 1rem;
+}
+.groceryItem{
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr 1fr;
+    margin-top: 1rem;
+}
+.groceryItem p{
+    font-size: 1.8rem;
+}
+.groceryItem h2{
+    text-transform: uppercase;
+}
+.groceryBtn{
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    background: none;
+    border: 1px solid black;
+    color: white;
+}
+.groceryBtn.add{
+    background-color: var(--groceryDarkGreen);
+}
+.groceryBtn.remove{
+    background-color: var(--groceryRed);
+}
+.groceryBtn.clearAll{
+    background-color: var(--groceryRed);
+}
+.groceryTotal{
+    color: var(--groceryDarkGreen);
+    font-size: 3rem;
+    margin: 2rem;
+}
+.groceryNote{
+    margin: 2rem;
+    border: 1px solid rgb(70, 70, 70);
+    color: rgb(56, 56, 56);
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+.totalDiv{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+@media only screen and (max-width: 450px){
+    .inputItems{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+    .groceryInputArea{
+        height: 25px;
+        width: 125px;
+        font-size: 0.8rem;
+        margin: 0px;
+    }
+    .groceryInputArea.grocery{
+        width: 150px;
+    }
+    .groceryForm{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        margin: 0.5rem;
+    }
+    .groceryBtn{
+        font-size: 0.8rem;
+        padding: 0.2rem;
+        margin-top: 1rem;
+    }
+    .groceryOutput{
+        width: 90vw;
+        margin-top: 1rem;
+    }
+    .groceryItem{
+        grid-template-columns: 3fr 1fr 1fr 1fr;
+    }
+    .groceryItem p{
+        font-size: 0.8rem;
+    }
+    .groceryItem h2{
+        font-size: 0.8rem;
+    }
+    .groceryTotal{
+        color: var(--groceryDarkGreen);
+        font-size: 1.5rem;
+        margin: 0.5rem;
+    }
+    .groceryNote{
+        border: 1px solid rgb(70, 70, 70);
+        color: rgb(56, 56, 56);
+        padding: 0.2rem;
+        font-size: 0.7rem;
+    }
+    .totalDiv{
+        width: 70%;
+    }
+}

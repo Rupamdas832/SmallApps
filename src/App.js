@@ -1,12 +1,13 @@
-import React, { Fragment } from "react"
+import React from "react"
 import './App.css';
 import CashReturn from './Components/CashReturn';
-import Footer from "./Components/Footer";
+
 import Header from "./Components/Header";
 import LuckyBirthday from "./Components/LuckyBirthday";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import HeroSection from "./Components/HeroSection";
 import ProfitLoss from "./Components/ProfitLoss";
+import GroceryList from "./Components/GroceryList";
 
 const App = () => {
   return (
@@ -17,8 +18,9 @@ const App = () => {
           <Route path="/cashmanager" component={CashReturn}/>
           <Route path="/luckybirthday" component={LuckyBirthday}/>
           <Route path="/profitloss" component={ProfitLoss}/>
+          <Route path="/grocerylist" component={GroceryList}/>
         </Switch>
-      <Footer/>
+        
       </Router> 
   )
 }

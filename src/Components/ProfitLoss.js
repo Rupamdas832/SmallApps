@@ -54,9 +54,9 @@ function ProfitLoss() {
                 </div>
             </form>
             <button onClick={calculate} className="profitBtn">Calculate</button>
-            {negative == "rgb(2,62,138)" ? ("") : (<div className="profitOutput">
-            {negative == "rgb(85,166,48)" ? (<h1>Profit Amount : ${profit}</h1>) : (<h1>Loss Amount : ${profit}</h1>)}
-            {negative == "rgb(85,166,48)" ? (<h1>Profit Percentage : {profitPer}%</h1>) : (<h1>Loss Percentage : {profitPer}%</h1>)}
+            {negative === "rgb(2,62,138)" ? ("") : (<div className="profitOutput">
+            {negative === "rgb(85,166,48)" ? (<h1>Profit Amount : ${profit}</h1>) : (<h1>Loss Amount : ${profit}</h1>)}
+            {negative === "rgb(85,166,48)" ? (<h1>Profit Percentage : {profitPer}%</h1>) : (<h1>Loss Percentage : {profitPer}%</h1>)}
             </div>)
             }
             <button onClick={reset} className="profitBtn reset">Reset</button>

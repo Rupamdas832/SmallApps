@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Heading from './Heading'
+import Footer from "./Footer";
 import "./HeroSection.css"
 
 export default function HeroSection() {
@@ -12,8 +13,9 @@ export default function HeroSection() {
                 <Link to="/cashmanager"><button className="heroBtn">Cash Manager</button></Link>
                 <Link to="/luckybirthday"><button className="heroBtn">Lucky Birthday</button></Link>
                 <Link to="/profitloss"><button className="heroBtn">Profit Loss</button></Link>
+                <Link to="/grocerylist"><button className="heroBtn">Grocery List</button></Link>
             </div>
-            
+            <Footer/>
         </div>
     )
 }
