@@ -2,11 +2,15 @@ import React, {useEffect, useState } from 'react'
 import Heading from './Heading'
 import InputGrocery from './InputGrocery'
 import "./GroceryList.css"
+import { connect } from 'react-redux';
+import ColorList from './ColorList';
 
-export default function GroceryList() {
+const GroceryList = ({theme}) => {
 
     const [total, setTotal] = useState("")
     const [groceryList, setGroceryList] = useState([])
+
+    const themeColor = ColorList[theme];
 
     
     const addItem = (item) => {
@@ -37,7 +41,7 @@ export default function GroceryList() {
     },[groceryList])
 
     return (
-        <div className="groceryList">
+        <div className="groceryList" style={{backgroundColor: `${themeColor?.groceryBgColor}`, color: `${themeColor?.groceryColor}`}}>
         <Heading title="Groceries" color="green"/>
             <InputGrocery addItem={addItem}/>
             <div className="groceryOutput">
@@ -68,3 +72,9 @@ export default function GroceryList() {
         </div>
     )
 }
+
+const mapStateToProps = state => ({
+    theme: state.theme
+})
+
+export default connect(mapStateToProps)(GroceryList)

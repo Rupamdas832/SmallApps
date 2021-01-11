@@ -1,13 +1,17 @@
 import React, { useState } from 'react'
 import Heading from './Heading'
 import "./LuckyBirthday.css"
+import { connect } from 'react-redux';
+import ColorList from './ColorList';
 
-export default function LuckyBirthday() {
+const LuckyBirthday = ({theme}) => {
 
     const [date,setDate] = useState("")
     const [luckyNumber,setLuckyNumber] = useState("")
     const [lucky, setLucky] = useState(false)
     const [show, setShow] = useState(false)
+
+    const themeColor = ColorList[theme];
 
     const checkLucky = () => {
         let dateNumber = date.replace(/-/g, "")
@@ -28,7 +32,7 @@ export default function LuckyBirthday() {
        setShow(false)
     }
     return (
-        <div className="luckyBirthday">
+        <div className="luckyBirthday" style={{backgroundColor: `${themeColor?.luckyBgColor}`, color: `${themeColor?.luckyColor}`}}>
             <Heading title="Lucky You" color="rgb(0,127,95)"/>
             <h3 className="luckysubheading">Is your Birthday Lucky?</h3>
             <div className="luckyInputs">
@@ -51,3 +55,9 @@ export default function LuckyBirthday() {
             </div>
     )
 }
+
+const mapStateToProps = state => ({
+    theme: state.theme
+})
+
+export default connect(mapStateToProps)(LuckyBirthday)

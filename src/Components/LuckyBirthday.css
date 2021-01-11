@@ -39,7 +39,7 @@
 }
 .inputLabel{
     font-size: 2rem;
-    color: rgb(56, 56, 56);
+    margin: 1.5rem;
 }
 .luckyBtn{
     padding: 0.8rem;
@@ -60,7 +60,7 @@
 .note{
     margin: 2rem;
     border: 1px solid rgb(70, 70, 70);
-    color: rgb(56, 56, 56);
+    
     padding: 1rem;
     font-size: 1.2rem;
     position: absolute;
@@ -97,7 +97,7 @@
     }
     .note{
         border: 1px solid rgb(70, 70, 70);
-        color: rgb(56, 56, 56);
+
         padding: 0.2rem;
         font-size: 0.7rem;
         position: absolute;
