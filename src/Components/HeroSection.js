@@ -3,10 +3,14 @@ import { Link } from 'react-router-dom'
 import Heading from './Heading'
 import Footer from "./Footer";
 import "./HeroSection.css"
+import { connect } from 'react-redux';
+import ColorList from './ColorList';
 
-export default function HeroSection() {
+const HeroSection = ({theme}) => {
+
+    const themeColor = ColorList[theme];
     return (
-        <div className="heroSection">
+        <div className="heroSection" style={{backgroundColor: `${themeColor?.heroSectionBgColor}`, color: `${themeColor?.heroSectionColor}`}}>
             <Heading title="Small Apps" color="rgb(247,127,0)"/>
             <h2>Bunch of apps to play with</h2>
             <div className="heroBtns"> 
@@ -19,3 +23,9 @@ export default function HeroSection() {
         </div>
     )
 }
+
+const mapStateToProps = state => ({
+    theme: state.theme
+})
+
+export default connect(mapStateToProps)(HeroSection)

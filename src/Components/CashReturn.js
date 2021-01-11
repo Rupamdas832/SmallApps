@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import "./CashReturn.css"
+import { connect } from 'react-redux';
+import ColorList from './ColorList';
 import Heading from './Heading';
 
-export default function CashReturn() {
+const CashReturn = ({theme}) => {
+
+    const themeColor = ColorList[theme];
 
     const [bill1, setBill1] = useState();
     const [cash, setCash] = useState();
@@ -47,7 +51,7 @@ export default function CashReturn() {
         setFreq({})
     }
     return (
-        <div className="cashReturn">
+        <div className="cashReturn" style={{backgroundColor: `${themeColor?.cashReturnBgColor}`, color: `${themeColor?.cashReturnColor}`}}>
         <Heading title="Cash Manager" color="rgb(132,0,50)"/>
         <h3 className="subheading">Enter your <span className="headingSpan">Bill Amount</span> and <span className="headingSpan">Cash</span>. The app will give you the number of notes to return.</h3>
         <form className="cashForm">
@@ -66,3 +70,9 @@ export default function CashReturn() {
         </div>
     )
 }
+
+const mapStateToProps = state => ({
+    theme: state.theme
+})
+
+export default connect(mapStateToProps)(CashReturn)
