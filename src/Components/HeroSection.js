@@ -18,6 +18,7 @@ const HeroSection = ({theme}) => {
                 <Link to="/luckybirthday"><button className="heroBtn">Lucky Birthday</button></Link>
                 <Link to="/profitloss"><button className="heroBtn">Profit Loss</button></Link>
                 <Link to="/grocerylist"><button className="heroBtn">Grocery List</button></Link>
+                <Link to="/crypto"><button className="heroBtn">Crypto$</button></Link>
             </div>
             <Footer/>
         </div>
