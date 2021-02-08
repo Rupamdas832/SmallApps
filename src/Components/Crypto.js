@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import Axios from "axios"
 
 const Crypto = () => {
    // const [coins, setCoins] = useState([])
@@ -8,7 +9,7 @@ const Crypto = () => {
        // const key1 = 'coinrankinge1eab9daa6c8dc7882f498ff84049614872be9fea18cb6d2';
         const url2 = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest";
         const key2 = "deafcbf6-7fb9-45a7-85de-c889a6eaae83";
-        const response = await fetch(url2,{
+        /*const response = await fetch(url2,{
             qs: {
                 'start': '1',
                 'limit': '10',
@@ -22,7 +23,7 @@ const Crypto = () => {
             gzip: true
         })
         const result = await response.json();
-        console.log(response)
+        console.log(response)*/
         
         /*    fetch("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest",{
             qs: {
@@ -38,6 +39,20 @@ const Crypto = () => {
         }).then(response => response.json()).then(result => console.log(result))
 
         */
+       const response = await Axios.get(url2,{
+        qs: {
+            'start': '1',
+            'limit': '10',
+            'convert': 'USD'
+        },
+        headers: {
+            'X-CMC_PRO_API_KEY': "deafcbf6-7fb9-45a7-85de-c889a6eaae83"
+        },
+        json: true,
+        gzip: true 
+       });
+       const result = await response.json();
+       console.log(result)
     }
     
     useEffect(() => {
