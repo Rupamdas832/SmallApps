@@ -11,6 +11,7 @@ import GroceryList from "./Components/GroceryList";
 import { Provider } from "react-redux";
 import Store from "../src/Redux/Store"
 import Crypto from "./Components/Crypto";
+import Nutrient from "./Components/Nutrient";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
             <Route path="/profitloss" component={ProfitLoss}/>
             <Route path="/grocerylist" component={GroceryList}/>
             <Route path="/crypto" component={Crypto}/>
+            <Route path="/nutrient" component={Nutrient}/>
         </Switch>
       </Provider> 
       </Router> 

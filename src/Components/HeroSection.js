@@ -16,9 +16,10 @@ const HeroSection = ({theme}) => {
             <div className="heroBtns"> 
                 <Link to="/cashmanager"><button className="heroBtn">Cash Manager</button></Link>
                 <Link to="/luckybirthday"><button className="heroBtn">Lucky Birthday</button></Link>
-                <Link to="/profitloss"><button className="heroBtn">Profit Loss</button></Link>
+                <Link to="/profitloss"><button className="heroBtn">Profit & Loss</button></Link>
                 <Link to="/grocerylist"><button className="heroBtn">Grocery List</button></Link>
-                <Link to="/crypto"><button className="heroBtn">Crypto$</button></Link>
+                <Link to="/crypto"><button className="heroBtn">Crypto $ Update</button></Link>
+                <Link to="/nutrient"><button className="heroBtn">Nutrient Check</button></Link>
             </div>
             <Footer/>
         </div>
