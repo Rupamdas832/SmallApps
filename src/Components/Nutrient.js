@@ -29,18 +29,24 @@ function Nutrient() {
         setTotal(_total)
         setTotPer(_totPer)
     },[foodList])
+
+    const delBtn = (index) => {
+        const selectedItem = foodList[index]
+        setFoodList(foodList.filter(item => item!= selectedItem))
+    }
     
     return (
         <div className="nutrientList">
             <h1>Nutrient</h1>
             <InputNutrient getFood={getFood}/>
             <div className="meter">
-                <span style={{width: `${totPer}%`}}></span>
+                <span style={{width: `${totPer}%`}}>{total}</span>
             </div>
             {foodList && foodList.map((food, index) => {
                 return <div>
                     <h1>{food.name}</h1>
                     <h3>{food.cal}</h3>
+                    <button onClick={() => delBtn(index)}>Delete</button>
                 </div>
             })}
             <h1>Total :- </h1><h3>{total}</h3>
