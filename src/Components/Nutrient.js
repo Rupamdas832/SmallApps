@@ -43,9 +43,10 @@ function Nutrient() {
                 <span style={{width: `${totPer}%`}}>{total}</span>
             </div>
             {foodList && foodList.map((food, index) => {
-                return <div>
+                return <div key={index} className="foodItem">
                     <h1>{food.name}</h1>
                     <h3>{food.cal}</h3>
+                    <h3>{food.prot}</h3>
                     <button onClick={() => delBtn(index)}>Delete</button>
                 </div>
             })}

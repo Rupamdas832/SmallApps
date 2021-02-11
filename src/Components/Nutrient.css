@@ -16,3 +16,8 @@
     position: absolute;
     border-radius: 20px;
 }
+.foodItem{
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr 1fr;
+    margin-top: 1rem;
+}

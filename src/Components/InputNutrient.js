@@ -10,10 +10,12 @@ export default function InputGrocery({getFood}) {
             const Id = "357c9d12";
             const key = "4c628d74dd7c129964d95c70f5ec0566";
             const response = await fetch(`https://api.edamam.com/api/nutrition-data?app_id=${Id}&app_key=${key}&ingr=${foodName}`)
-            const {calories}= await response.json()
+            const result = await response.json()
+            console.log(result)
             const _foodItem = {
                 name: foodName,
-                cal: calories
+                cal: result.calories,
+                prot: result.totalDaily.PROCNT.quantity
             }
             getFood(_foodItem)
         setFoodName("")
