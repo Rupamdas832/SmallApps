@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import InputNutrient from "./InputNutrient"
 import "./Nutrient.css"
+import Heading from "./Heading"
 function Nutrient() {
     const [foodList, setFoodList] = useState([])
     const [total, setTotal] = useState("")
@@ -37,20 +38,32 @@ function Nutrient() {
     
     return (
         <div className="nutrientList">
-            <h1>Nutrient</h1>
+            <Heading title="Calorie Tracker" color="green"/>
             <InputNutrient getFood={getFood}/>
             <div className="meter">
                 <span style={{width: `${totPer}%`}}>{total}</span>
             </div>
-            {foodList && foodList.map((food, index) => {
-                return <div key={index} className="foodItem">
-                    <h1>{food.name}</h1>
-                    <h3>{food.cal}</h3>
-                    <h3>{food.prot}</h3>
-                    <button onClick={() => delBtn(index)}>Delete</button>
+            <div className="foodOutput">
+                <div className="foodItem">
+                    <p>Food Name</p>
+                    <p>Calorie</p>
+                    <p>Protein</p>
+                    <p></p>
                 </div>
-            })}
-            <h1>Total :- </h1><h3>{total}</h3>
+                <h1 className="border"></h1>
+                {foodList && foodList.map((food, index) => {
+                    return <div key={index} className="foodItem">
+                        <h1>{food.name}</h1>
+                        <h3>{food.cal}</h3>
+                        <h3>{food.prot}</h3>
+                        <button onClick={() => delBtn(index)} className="foodBtn">Delete</button>
+                    </div>
+                })}
+                <h1 className="border"></h1>
+            </div>
+            {total && <div className="totalDiv">
+            <h3 className="foodTotal">Total Calorie :- </h3><h3>{total}</h3>
+            </div>}
         </div>
     )
 }

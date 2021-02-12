@@ -1,11 +1,48 @@
 
-
+.nutrientList{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    align-items: center;
+    background-color: var(--groceryLightGreen);
+    position: relative;
+}
+.inputItems{
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr 1fr;
+    width: 100vw;
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.foodInputArea{
+    width: 450px;
+    height: 30px;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 1rem;
+    background-color: rgb(170, 170, 170);
+    color: black;
+}
+.foodBtn{
+    font-size: 1rem;
+    padding: 0.2rem;
+    background: none;
+    border: 1px solid black;
+    color: white;
+}
+.foodBtn.add{
+    background-color: var(--groceryDarkGreen);
+    width: 100px;
+}
 .meter{
     height: 30px;
-    width: 80vw;
+    width: 90vw;
     background-color: rgb(160, 160, 160);
     border-radius: 20px;
-    margin: 10px;
+    margin: 2rem;
     padding: 5px;
     
     position: relative;
@@ -16,8 +53,35 @@
     position: absolute;
     border-radius: 20px;
 }
+.foodOutput{
+    width: 70vw;
+    height: auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .foodItem{
     display: grid;
     grid-template-columns: 3fr 2fr 2fr 1fr;
     margin-top: 1rem;
+    align-items: center;
+}
+
+
+.border{
+    border: 1px solid var(--groceryDarkGreen);
+    margin: 1rem;
+}
+.totalDiv{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.foodTotal{
+    color: var(--groceryDarkGreen);
+    font-size: 3rem;
+    margin: 2rem;
 }

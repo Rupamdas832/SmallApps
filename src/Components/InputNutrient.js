@@ -25,9 +25,9 @@ export default function InputGrocery({getFood}) {
             <div className="inputItems">
                 <form className="groceryForm">
                     <label>Grocery</label>
-                    <input placeholder="Enter food item" className="groceryInputArea grocery" type="text" name="food" value={foodName} onChange={(event) => setFoodName(event.target.value)}/>
+                    <input placeholder="Enter food item" className="foodInputArea" type="text" name="food" value={foodName} onChange={(event) => setFoodName(event.target.value)}/>
                 </form> 
-                <button onClick={addBtnClick} className="groceryBtn add">Add</button>
+                <button onClick={addBtnClick} className="foodBtn add">Add</button>
                 </div>
     )
 }
